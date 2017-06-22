@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:background="@drawable/ic_order_item_bg">
+
+    <View
+        android:id="@+id/iv_top_divide"
+        style="@style/MWidget.DivideVertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_size"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/MWidget.TextView.DeviceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/iv_top_divide"
+        android:layout_marginLeft="@dimen/default_left_margin_16dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/state"
+        style="@style/MWidget.TextView.BlackSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="@dimen/default_left_margin_16dp" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/MWidget.DivideHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_size"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp"></View>
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/MWidget.TextView.BlackSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="@dimen/default_left_margin_16dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/price" />
+
+    <TextView
+        android:id="@+id/desc"
+        style="@style/MWidget.TextView.BlackSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/price"
+        android:minLines="2" />
+
+    <TextView
+        android:id="@+id/price"
+        style="@style/MWidget.TextView.DeviceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/pay"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/line"
+        android:layout_marginRight="@dimen/default_left_margin_16dp"
+        android:gravity="center" />
+
+
+    <TextView
+        android:id="@+id/cancel"
+        style="@style/MWidget.TextView.BlackSummary"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/pay"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/pay"
+        android:background="@drawable/bg_button_pay"
+        android:gravity="center"
+        android:text="@string/order_cancel"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/pay"
+        style="@style/MWidget.TextView.BlackSummary"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/desc"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="@dimen/default_left_margin_16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button_pay"
+        android:gravity="center"
+        android:text="@string/order_paynow"
+        android:textColor="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/iv_bottom_divide"
+        style="@style/MWidget.DivideHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_size"
+        android:layout_below="@+id/pay"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_home_traffic_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <TextView
+            android:id="@+id/traffic_tip"
+            style="@style/MWidget.TextView.DeviceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tc_traffic"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/text_size_20px"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tc_traffic"
+            style="@style/MWidget.TextView.DeviceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tc_traffic"
+            android:textSize="@dimen/text_size_20px"/>
+
+        <TextView
+            android:id="@+id/jyb_traffic"
+            style="@style/MWidget.TextView.DeviceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/jyb_traffic"
+            android:textSize="@dimen/text_size_20px"/>
+
+        <TextView
+            android:id="@+id/yy_traffic"
+            style="@style/MWidget.TextView.DeviceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tc_traffic"
+            android:layout_alignLeft="@+id/tc_traffic"
+            android:text="@string/yy_traffic"
+            android:textSize="@dimen/text_size_20px"/>
+
+        <TextView
+            android:id="@+id/sy_traffic"
+            style="@style/MWidget.TextView.DeviceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jyb_traffic"
+            android:layout_alignRight="@+id/jyb_traffic"
+            android:text="@string/sy_traffic"
+            android:textSize="@dimen/text_size_20px"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/tip"
+            style="@style/MWidget.TextView.AppSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/purchase_traffic_tip"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_20px"/>
+
+        <TextView
+            android:id="@+id/purchase"
+            style="@style/MWidget.TextView.Button.Login"
+            android:text="@string/purchase_traffic"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tip"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

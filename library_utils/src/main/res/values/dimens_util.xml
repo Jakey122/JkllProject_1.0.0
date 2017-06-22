@@ -1,0 +1,7 @@
+<resources>
+
+    <dimen name="util_text_size_22px">14sp</dimen>
+    <dimen name="util_text_size_28px">18sp</dimen>
+    <dimen name="util_text_size_24px">16sp</dimen>
+    <dimen name="util_line">0.5dp</dimen>
+</resources>

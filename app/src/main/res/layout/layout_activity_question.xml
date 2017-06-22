@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/actionBarSize"
+        android:layout_above="@+id/line1"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_size"
+        style="@style/MWidget.DivideHorizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/layout_num"></View>
+
+    <RelativeLayout
+        android:id="@+id/layout_num"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_left_margin_16dp"
+        android:layout_marginBottom="@dimen/default_left_margin_16dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="16dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_question_call"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MWidget.TextView.AppSummary"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/mine_customer"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_alignTop="@+id/icon"/>
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MWidget.TextView.AppSummary"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_16px"
+            android:text="@string/mine_question_num"
+            android:layout_alignLeft="@+id/icon"
+            android:layout_below="@+id/icon"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+
+    <include layout="@layout/layout_toolbar_custom_mine"></include>
+
+</RelativeLayout>

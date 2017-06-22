@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_advise"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_bottom_dimens"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_info"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/margin_top_dimens"
+            android:text="@string/title_contact"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_24px" />
+
+        <EditText
+            android:id="@+id/edit_contact"
+            style="@style/MWidget.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_et_height_dimens"
+            android:layout_below="@+id/tv_contact"
+            android:background="@drawable/bg_item_question"
+            android:hint="@string/advise_et_hint"
+            android:lines="1"
+            android:maxLength="100"
+            android:paddingLeft="@dimen/default_et_content_padding_dimens"
+            android:singleLine="true"
+            android:textColor="@color/text_summary_content"
+            android:textColorHint="@color/text_hint" />
+
+        <TextView
+            android:id="@+id/tv_question_script"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/margin_top_dimens"
+            android:text="@string/problem_description"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/text_size_24px" />
+
+        <RelativeLayout
+            android:id="@+id/layout_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_question_script">
+
+            <EditText
+                android:id="@+id/edit_opinion"
+                style="@style/MWidget.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_item_question"
+                android:gravity="left|top"
+                android:hint="请把您的意见或者建议，告诉我们！"
+                android:maxLength="240"
+                android:minLines="7"
+                android:paddingLeft="@dimen/default_et_content_padding_dimens"
+                android:paddingRight="@dimen/default_et_content_padding_dimens"
+                android:textColor="@color/text_summary_content"
+                android:textColorHint="@color/text_hint" />
+
+            <TextView
+                android:id="@+id/opinion_count"
+                style="@style/MWidget.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/edit_opinion"
+                android:layout_alignRight="@+id/edit_opinion"
+                android:layout_margin="@dimen/view_default_margin"
+                android:text="@string/comment_opinion_text_count"
+                android:textColor="@color/text_hint"
+                android:textSize="@dimen/text_size_22px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_contact"
+            android:layout_marginTop="70dp">
+
+            <TextView
+                android:id="@+id/btn_submit"
+                style="@style/MWidget.TextView.MineTitle"
+                android:layout_centerInParent="true"
+                android:text="@string/btn_submit" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

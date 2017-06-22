@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MUtilDialogButton">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">@dimen/util_text_size_24px</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@drawable/bg_btn_dialog</item>
+    </style>
+
+    <style name="MUtilDialogActivity" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowFrame">@color/util_none</item>
+        <item name="android:windowBackground">@color/util_none</item>
+        <item name="android:colorBackground">@color/util_none</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="windowActionBar">false</item>-->
+    </style>
+
+</resources>

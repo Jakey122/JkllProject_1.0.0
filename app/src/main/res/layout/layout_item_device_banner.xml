@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/MWidget.TextView.DeviceTitle"
+            android:layout_marginLeft="@dimen/default_left_margin_16dp"
+            android:ellipsize="end"
+            android:maxEms="12"
+            android:singleLine="true"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/state"
+            style="@style/MWidget.TextView.AppSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_state_using"
+            android:layout_toRightOf="@+id/name"
+            android:gravity="center_vertical"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:text="xx"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_left_margin_16dp"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:src="@drawable/ic_launcher"
+        android:layout_below="@+id/layout_name"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

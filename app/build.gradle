@@ -1,0 +1,139 @@
+apply plugin: 'com.android.application'
+
+def packageTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+
+android {
+
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "cn.showmac.cirus"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 10000
+        versionName "1.0.0"
+
+        buildConfigField("String", "API_HOST", "\"mapp.showmac.cn\"")                    //API接口地址
+
+        multiDexEnabled true
+        // dex突破65535的限制
+
+        manifestPlaceholders = [
+                umeng_appkey        : "592bfe901061d220a20018f1",                                  //umeng key
+                umeng_message_secret: "f04b5cf92a99f4d4e68ff8081717baef",                          //umeng push secret
+                channel             : "10000"                                                         //渠道号
+        ]
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'jkll'
+            keyPassword 'jkll123'
+            storeFile file('/Users/xiesongrin/Documents/android_studio/otherWorkspace/JkllProject/jkll.jks')
+            storePassword 'jkll123'
+        }
+        release {
+            keyAlias 'jkll'
+            keyPassword 'jkll123'
+            storeFile file('/Users/xiesongrin/Documents/android_studio/otherWorkspace/JkllProject/jkll.jks')
+            storePassword 'jkll123'
+        }
+    }
+
+    buildTypes {
+        release {
+//          shrinkResources true // 移除无用的resource文件
+            zipAlignEnabled true // zipalign优化
+            minifyEnabled false  // 混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+
+        /*com.jkll.app包名*/
+        com_jkll_app_10000_release {
+            manifestPlaceholders = [
+                    umeng_appkey        : "592bfe901061d220a20018f1",                                  //umeng key
+                    umeng_message_secret: "f04b5cf92a99f4d4e68ff8081717baef",                          //umeng push secret
+                    channel             : "10000"                                                         //渠道号
+            ]
+        }
+
+        com_jkll_app_10001_release {
+            versionCode 10001
+            versionName "1.0.1"
+            manifestPlaceholders = [
+                    umeng_appkey        : "592bfe901061d220a20018f1",                                  //umeng key
+                    umeng_message_secret: "f04b5cf92a99f4d4e68ff8081717baef",                          //umeng push secret
+                    channel             : "10000"                                                         //渠道号
+            ]
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                File outputDirectory = new File(outputFile.parent);
+                def fileName
+                if (variant.buildType.name == "release") {
+                    fileName = "JkllProject-release_v${defaultConfig.versionName}_${packageTime()}_${variant.productFlavors[0].name}.apk"
+                } else {
+                    fileName = outputFile.name
+                }
+                output.outputFile = new File(outputDirectory, fileName)
+            }
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/commons-io-2.4.jar')
+    compile project(':library_utils')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.jakewharton:butterknife:7.0.0'
+    compile project(':library_zxing')
+    compile project(':library_net')
+    compile 'com.daimajia.swipelayout:library:1.2.0'
+    compile project(':library_updater')
+    compile project(path: ':library_updater')
+    //必须添加
+    compile 'com.pingxx:pingpp-core:2.1.9'
+    //使用支付宝时添加
+    compile 'com.pingxx:pingpp-alipay:2.1.9'
+    //使用微信支付时添加
+    compile 'com.pingxx:pingpp-wxpay:2.1.9'
+    compile files('libs/alicloud-android-sdk-httpdns-1.0.7.jar')
+    compile files('libs/com.umeng.message_3.1.1.jar')
+    compile files('libs/utdid4all-1.1.5.3_proguard.jar')
+    compile 'me.iwf.photopicker:PhotoPicker:0.1.8'
+}
+

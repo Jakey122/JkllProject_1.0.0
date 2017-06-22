@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_gift_dialog"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_left_margin_16dp">
+
+                <com.android.apps.view.PayView
+                    android:id="@+id/payview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.android.apps.view.PayView>
+
+                <LinearLayout
+                    android:id="@+id/left"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_alignTop="@+id/payview"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivleft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_item_margin"
+                        android:src="@drawable/bg_button_traffic_left" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/right"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/payview"
+                    android:gravity="center_vertical|right">
+
+                    <ImageView
+                        android:id="@+id/ivright"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/default_item_margin"
+                        android:src="@drawable/bg_button_traffic_right" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/default_left_margin_16dp"
+                android:paddingTop="@dimen/default_left_margin_16dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_apliy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_apliy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_button_pay_apliy" />
+
+                    <TextView
+                        android:id="@+id/tv_apliy"
+                        style="@style/MWidget.TextView.OrderDetailSummary"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/order_pay_apliy"
+                        android:textColor="@color/color_text_btn_pay" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_wx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_wx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_button_pay_wx" />
+
+                    <TextView
+                        android:id="@+id/tv_wx"
+                        style="@style/MWidget.TextView.OrderDetailSummary"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/order_pay_wx"
+                        android:textColor="@color/color_text_btn_pay" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                style="@style/MWidget.DivideHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divide_size"
+                android:layout_marginBottom="@dimen/default_left_margin_16dp"
+                android:layout_marginLeft="@dimen/default_item_margin"
+                android:layout_marginRight="@dimen/default_item_margin"></View>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_info"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/color_dialog_border"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="30dp">
+
+                <View
+                    android:id="@+id/divide2"
+                    android:layout_width="@dimen/line"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_dialog_border"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/MCustomDialogButton" />
+
+                <View
+                    android:id="@+id/divide3"
+                    android:layout_width="@dimen/line"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_dialog_border"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button1"
+                    style="@style/MCustomDialogButton.Gift"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_button_login"
+                    android:text="@string/btn_ok"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/button3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_detail_close"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

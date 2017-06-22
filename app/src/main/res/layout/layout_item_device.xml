@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_delete"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@color/deep_red"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_recycler_item">
+
+        <View
+            android:id="@+id/iv_top_divide"
+            style="@style/MWidget.DivideVertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divide_size"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/default_item_margin"
+            android:layout_marginRight="@dimen/default_item_margin"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/default_item_margin"
+            android:src="@drawable/ic_launcher" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icon">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/MWidget.TextView.DeviceTitle"
+                android:layout_marginLeft="@dimen/default_item_margin"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/state"
+                style="@style/MWidget.TextView.AppSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/name"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_state_using"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/iv_bottom_divide"
+            style="@style/MWidget.DivideHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divide_size"
+            android:layout_below="@+id/icon"
+            android:layout_marginLeft="@dimen/default_item_margin"
+            android:layout_marginRight="@dimen/default_item_margin" />
+
+    </RelativeLayout>
+</com.daimajia.swipe.SwipeLayout>

@@ -1,0 +1,311 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Translucent" parent="@style/AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AppTheme.DialogActivity" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackground">@color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MWidget" />
+
+    <style name="MWidget.Design.TabLayout.Home" parent="Widget.Design.TabLayout">
+        <item name="android:theme">@style/AppTheme.AppBarOverlay</item>
+        <item name="tabBackground">@color/colorPrimary</item>
+        <item name="tabIndicatorColor">@color/transparent</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+    </style>
+
+    <style name="MWidget.Design.TabLayout" parent="Widget.Design.TabLayout">
+        <item name="android:theme">@style/AppTheme.AppBarOverlay</item>
+        <item name="tabBackground">?attr/colorPrimary</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MWidget.TextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/text_title</item>
+        <item name="android:textSize">@dimen/text_size_20px</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="MWidget.TextView.Title">
+        <item name="android:textSize">@dimen/text_size_22px</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="MWidget.TextView.DeviceTitle">
+        <item name="android:textSize">@dimen/text_size_24px</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MWidget.TextView.AppTitle">
+        <item name="android:textSize">@dimen/text_size_22px</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MWidget.TextView.MineTitle">
+        <item name="android:textSize">@dimen/text_size_24px</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">95dp</item>
+        <item name="android:layout_height">37dp</item>
+        <item name="android:background">@drawable/bg_button_start</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MWidget.TextView.Summary">
+        <item name="android:textSize">@dimen/text_size_18px</item>
+        <item name="android:textColor">@color/text_summary</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="MWidget.TextView.BarTitle">
+        <item name="android:textSize">@dimen/text_size_24px</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MWidget.TextView.LoginTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_46px</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MWidget.TextView.EditText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_20px</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/grey</item>
+    </style>
+
+    <style name="MWidget.TextView.AppSummary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/text_size_18px</item>
+        <item name="android:textColor">@color/text_summary</item>
+    </style>
+
+    <style name="MWidget.TextView.BlackSummary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/text_size_18px</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MWidget.TextView.OrderDetailSummary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/text_size_20px</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MWidget.TextView.PurchaseSummary">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/text_size_18px</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="MWidget.TextView.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/text_size_22px</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MWidget.TextView.Button.Sendcode">
+        <item name="android:layout_width">@dimen/bg_button_start_width</item>
+        <item name="android:layout_height">@dimen/bg_button_sendcode_width</item>
+        <item name="android:background">@drawable/bg_button_start</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_20px</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MWidget.TextView.Button.Start">
+        <item name="android:layout_width">@dimen/bg_button_start_width</item>
+        <item name="android:layout_height">@dimen/bg_button_start_height</item>
+        <item name="android:background">@drawable/bg_button_start</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/color_text_btn_login</item>
+        <item name="android:textSize">@dimen/text_size_22px</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MWidget.TextView.Button.Login">
+        <item name="android:layout_width">@dimen/bg_button_start_width</item>
+        <item name="android:layout_height">@dimen/bg_button_start_height</item>
+        <item name="android:background">@drawable/bg_button_login</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/color_text_btn_login</item>
+        <item name="android:textSize">@dimen/text_size_22px</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MWidget.TextView.LoadView">
+        <item name="android:textSize">@dimen/text_size_20px</item>
+        <item name="android:textColor">@color/text_summary</item>
+        <item name="android:ellipsize">none</item>
+    </style>
+
+    <style name="MWidget.DivideHorizontal">
+        <item name="android:background">@drawable/bg_divide_horizontal</item>
+    </style>
+
+    <style name="MWidget.DivideVertical">
+        <item name="android:background">@drawable/bg_divide_vertical</item>
+    </style>
+
+    <style name="MWidget.Prompt">
+        <item name="android:background">@drawable/bg_prompt</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+        <!--<item name="android:visibility">invisible</item>-->
+    </style>
+
+    <style name="MWidget.EditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_22px</item>
+    </style>
+
+    <style name="MWidget.TextView.Tab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_tab</item>
+        <item name="android:textSize">@dimen/text_size_18px</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">1dp</item>
+
+    </style>
+
+    <style name="MCustomDialogButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">@dimen/text_size_22px</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@drawable/bg_btn_dialog</item>
+    </style>
+
+    <style name="MCustomDialogButton.Gift" parent="MCustomDialogButton">
+        <item name="android:layout_width">100dip</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:minHeight">38dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">@dimen/text_size_24px</item>
+    </style>
+
+
+    <style name="MCustomDialog" parent="Sherlock.__Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/bg_gift_dialog</item>
+        <item name="android:textColorPrimary">@color/abs__primary_text_holo_light</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Sherlock.__Theme.Dialog" parent="android:Theme.Dialog"></style>
+
+    <style name="Widget.Sherlock.ProgressBar" parent="android:Widget.Holo.ProgressBar"></style>
+
+    <style name="MListViewItemWidget.Title" parent="MWidget.TextView.Title"></style>
+
+    <!--<style name="Widget.Yellow.ProgressBar.Large" parent="android:Widget.Holo.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/progressbar_yellow</item>
+    </style>-->
+
+    <style name="MWidget.Button" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/bg_list_item_btn</item>
+        <item name="android:minHeight">@dimen/btn_height</item>
+        <item name="android:textColor">@color/color_text_btn</item>
+        <item name="android:textSize">@dimen/text_size_22px</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">@dimen/view_default_margin</item>
+        <item name="android:ellipsize">none</item>
+    </style>
+
+    <style name="MTabItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/text_size_22px</item>
+        <item name="android:background">@drawable/tab_indicator</item>
+        <item name="android:textColor">@color/btn_tab</item>
+    </style>
+
+    <style name="MTabItem.Top">
+        <item name="android:textColor">@color/text_btn_subtab</item>
+    </style>
+
+    <style name="MProgressDiaolg" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@color/none</item>
+        <item name="android:windowBackground">@color/none</item>
+        <item name="android:colorBackgroundCacheHint">@color/none</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 弹窗组件高亮样式 -->
+    <style name="MCustomDialogPositiveButton">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textSize">@dimen/text_size_22px</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+</resources>

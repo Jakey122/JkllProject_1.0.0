@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JkllProject_1.0.0.iml" filepath="$PROJECT_DIR$/JkllProject_1.0.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_net/library_net.iml" filepath="$PROJECT_DIR$/library_net/library_net.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_updater/library_updater.iml" filepath="$PROJECT_DIR$/library_updater/library_updater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_utils/library_utils.iml" filepath="$PROJECT_DIR$/library_utils/library_utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_zxing/library_zxing.iml" filepath="$PROJECT_DIR$/library_zxing/library_zxing.iml" />
+    </modules>
+  </component>
+</project>

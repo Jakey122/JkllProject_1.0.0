@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>-->
+
+    <!--<color name="colorPrimary">#ff6633</color>-->
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#212121</color>
+
+    <!--custom color-->
+    <color name="white">@android:color/white</color>
+    <color name="background">#f5f5f5</color>
+    <color name="black">@android:color/black</color>
+    <color name="deep_red">#FF2244</color>
+    <color name="red">#CC0033</color>
+    <color name="green">#1ac704</color>
+    <color name="blue">#00aac6</color>
+    <color name="orange">#FFCC00</color>
+    <color name="yellow">#ff6a00</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#88000000</color>
+    <color name="divide">#9e9e9e</color>
+    <color name="grey">#cccccc</color>
+    <color name="login_blue">#0099FF</color>
+
+    <color name="download_btn">@color/colorPrimary</color>
+    <color name="text_title">#333333</color>
+    <color name="text_summary_content">#777777</color>
+    <color name="text_summary">#969696</color>
+    <color name="text_hint">#999999</color>
+    <color name="text_nodata">#afb1b0</color>
+    <color name="text_detail_tab">#939393</color>
+
+    <color name="none">#00000000</color>
+    <color name="color_dialog_border">#dcdcdc</color>
+    <color name="dialog_btn_cancle">#9F9F9F</color>
+
+    <color name="abs__background_holo_dark">#ff000000</color>
+    <color name="abs__background_holo_light">#fff3f3f3</color>
+    <color name="abs__bright_foreground_holo_dark">@color/abs__background_holo_light</color>
+    <color name="abs__bright_foreground_holo_light">@color/abs__background_holo_dark</color>
+    <color name="abs__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="abs__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="abs__bright_foreground_inverse_holo_dark">
+        @color/abs__bright_foreground_holo_light
+    </color>
+    <color name="abs__bright_foreground_inverse_holo_light">
+        @color/abs__bright_foreground_holo_dark
+    </color>
+    <color name="abs__holo_blue_light">#ff33b5e5</color>
+
+    <color name="bg_text_green">#3cab25</color>
+
+    <color name="mi_btn">#e6e6e6</color>
+    <color name="btn_tab">#939393</color>
+
+    <!-- tab color -->
+    <color name="tab_bg_color">#f5f5f5</color>
+    <!--<color name="tab_bg_color">#f0f5f5f5</color>-->
+    <color name="tab_color_normal">@color/white</color>
+    <color name="tab_color_selected">@color/orange</color>
+    <color name="tab_bg_line">#e3e3e3</color>
+    <color name="actionbar_back_press">#eeeeee</color>
+
+    <color name="view_item_top_bg">#77000000</color>
+    <color name="dialog_default_content_color">#737373</color>
+    <color name="dialog_default_title_color">#303030</color>
+    <color name="dialog_default_btn_line_color">#9f9f9f</color>
+    <color name="dialog_default_division_line_color">#eaeaea</color>
+
+
+    <color name="color_button_origan">#ffcc00</color>
+
+
+</resources>

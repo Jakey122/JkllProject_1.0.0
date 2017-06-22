@@ -1,0 +1,27 @@
+<resources>>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--<item name="android:windowContentTransitions">true</item>
+        &lt;!&ndash; 指定shared element transitions &ndash;&gt;
+        <item name="android:windowSharedElementEnterTransition">@transition/transition_activity
+        </item>
+        <item name="android:windowSharedElementExitTransition">@transition/transition_activity
+        </item>-->
+    </style>
+
+    <style name="AppTheme.StatusBar">
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+</resources>

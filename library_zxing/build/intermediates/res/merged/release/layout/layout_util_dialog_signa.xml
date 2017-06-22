@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/util_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/title_template"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dip"
+                android:src="@null"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/alertTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/util_dialog_default_title_color"
+                android:textSize="@dimen/util_text_size_28px"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/titleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/util_line"
+            android:background="@color/util_white" />
+        <!-- If the client uses a customTitle, it will be added here. -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false">
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:padding="10dp"
+                android:textColor="@color/util_text_dialog_title"
+                android:textSize="@dimen/util_text_size_22px" />
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/util_line"
+            android:background="@color/util_color_dialog_border"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="5dp"
+            android:measureWithLargestChild="true"
+            android:orientation="horizontal"
+            android:paddingBottom="11dp">
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/MUtilDialogButton"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_gift_dialog_btn_cancle"
+                android:text="@string/util_btn_later"
+                android:textColor="@color/util_dialog_btn_cancle"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="@dimen/util_line"
+                android:layout_height="match_parent"
+                android:background="@color/util_color_dialog_border"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/MUtilDialogButton"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_gift_dialog_btn_check"
+                android:text="@string/util_btn_update_rightnow"
+                android:textColor="@color/util_white"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

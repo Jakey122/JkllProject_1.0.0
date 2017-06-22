@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/layout_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_indicator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp">
+
+            <com.android.apps.view.AutoScrollViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="281dp"
+                android:layout_height="372dp"
+                android:layout_centerInParent="true"></com.android.apps.view.AutoScrollViewPager>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/start"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/view_default_margin" />
+
+        <TextView
+            android:id="@+id/start"
+            style="@style/MWidget.TextView.Button.Start"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp"
+            android:text="@string/start" />
+
+        <include layout="@layout/layout_toolbar_custom_mine"></include>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_welcom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_app">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_logo" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_app"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_28px" />
+
+            <TextView
+                android:id="@+id/tv_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_app_name"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/tv_app_name"
+                android:text="1.0"
+                android:textColor="@color/deep_red"
+                android:textSize="@dimen/text_size_18px" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

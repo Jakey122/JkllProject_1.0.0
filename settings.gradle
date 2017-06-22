@@ -1,0 +1,1 @@
+include ':app', ':library_utils', ':library_zxing', ':library_net', ':library_updater'

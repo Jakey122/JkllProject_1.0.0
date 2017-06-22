@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="util_white">#FFFFFFFF</color>
+    <color name="util_text_dialog_title">#464646</color>
+    <color name="util_color_dialog_border">#dcdcdc</color>
+    <color name="util_color_dialog_btn_normal">#00000000</color>
+    <color name="util_dialog_default_title_color">#303030</color>
+    <color name="util_dialog_btn_cancle">#9F9F9F</color>
+    <color name="util_colorPrimary">#212121</color>
+    <color name="util_color_dialog_btn_focused">@color/util_color_dialog_border</color>
+    <color name="util_color_dialog_btn_pressed">#d0e1f9</color>
+    <color name="util_none">#00000000</color>
+</resources>

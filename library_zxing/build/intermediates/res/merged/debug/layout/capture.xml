@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.google.zxing.client.android.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/layout_menual"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/ic_bg_capture_text"
+            android:textSize="@dimen/util_text_size_22px"
+            android:textColor="@color/titleBar"
+            android:hint="@string/msg_default_adddevice_menual"
+            android:digits="@string/msg_format"
+            android:maxLength="30"/>
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/msg_default_menual_hint"
+            android:textColor="#FEFEFE"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/et_code"/>
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="120dp"
+            android:layout_height="31dp"
+            android:layout_below="@+id/tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/button_ok"
+            android:textColor="#CCCCCC"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/bg_menaul_adddevice_ok" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/msg_default_adddevice"
+        android:textColor="@color/status_text"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/status_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/msg_default_status"
+        android:textColor="#FEFEFE"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/menual_view"
+        android:layout_width="120dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/status_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/msg_default_adddevice_menual"
+        android:textColor="#CCCCCC"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:background="@drawable/bg_menaul_adddevice"/>
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#212121">
+
+        <LinearLayout
+            android:id="@+id/layout_toolbar_back"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/toolbar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:clickable="false"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/bg_actionbar_back" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="即刻流量"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/MWidget.TextView.LoginTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="116dp"
+        android:text="@string/success_reset_title" />
+
+    <ImageView
+        android:id="@+id/iv_tip"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_success"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/login"
+        style="@style/MWidget.TextView.Button.Login"
+        android:layout_width="@dimen/bg_button_reset_width"
+        android:layout_below="@+id/iv_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/login" />
+
+    <include layout="@layout/layout_toolbar_custom_mine"></include>
+
+</RelativeLayout>

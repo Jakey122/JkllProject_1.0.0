@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/MWidget.TextView.DeviceTitle"
+        android:layout_marginTop="20dp"
+        android:text="@string/order_detail_title"
+        android:textSize="@dimen/text_size_28px"/>
+
+    <View
+        style="@style/MWidget.DivideHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divide_size"
+        android:layout_marginLeft="@dimen/default_item_margin"
+        android:layout_marginRight="@dimen/default_item_margin"
+        android:layout_marginTop="8dp"></View>
+    <TextView
+        android:id="@+id/state"
+        style="@style/MWidget.TextView.OrderDetailSummary"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/desc"
+        style="@style/MWidget.TextView.OrderDetailSummary"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/nickname"
+        style="@style/MWidget.TextView.OrderDetailSummary"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical|left">
+    <TextView
+        android:id="@+id/orderid"
+        style="@style/MWidget.TextView.OrderDetailSummary"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/MWidget.TextView.OrderDetailSummary"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+    </LinearLayout>
+</LinearLayout>

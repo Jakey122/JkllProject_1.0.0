@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="util_btn_later">稍后</string>
+    <string name="util_btn_update_rightnow">升级</string>
+    <string name="util_signa_name">签名冲突</string>
+</resources>
